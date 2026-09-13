@@ -15,6 +15,10 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+env:
+  VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+  VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -32,11 +36,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      -  name: Build
-          env:
-              VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-                VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
-          run: npm run build
+      - name: Build
+        run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
