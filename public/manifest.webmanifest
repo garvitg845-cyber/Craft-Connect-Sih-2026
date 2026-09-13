@@ -1,0 +1,10 @@
+{
+  "name": "Craft Connect",
+  "short_name": "Craft Connect",
+  "description": "AI-powered marketplace connecting Indian artisans with customers and bulk buyers.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f97316",
+  "icons": [{"src":"/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}

@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-body text-gray-800 bg-craft-cream;
+}
+h1, h2, h3, h4 {
+  @apply font-display;
+}
+
+.btn-primary {
+  @apply bg-craft-orange hover:bg-orange-700 text-white font-semibold px-5 py-2.5 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed;
+}
+.btn-secondary {
+  @apply bg-tech-teal hover:bg-teal-800 text-white font-semibold px-5 py-2.5 rounded-lg transition disabled:opacity-50;
+}
+.btn-outline {
+  @apply border border-craft-orange text-craft-orange hover:bg-craft-orange hover:text-white font-semibold px-5 py-2.5 rounded-lg transition;
+}
+.card {
+  @apply bg-white rounded-xl shadow-sm border border-gray-100 p-5;
+}
+.input-field {
+  @apply w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-craft-orange/50;
+}
+.empty-state {
+  @apply flex flex-col items-center justify-center text-center py-16 px-6 text-gray-500;
+}
+
+
+html.cc-dark body { background: #111827; color: #e5e7eb; }
+html.cc-dark .bg-white { background-color: #1f2937 !important; }
+html.cc-dark .bg-gray-50 { background-color: #111827 !important; }
+html.cc-dark .bg-gray-100 { background-color: #374151 !important; }
+html.cc-dark .text-gray-800, html.cc-dark .text-gray-700 { color: #f3f4f6 !important; }
+html.cc-dark .text-gray-600, html.cc-dark .text-gray-500 { color: #d1d5db !important; }
+html.cc-dark .border, html.cc-dark .border-b, html.cc-dark .border-t, html.cc-dark .border-gray-100, html.cc-dark .border-gray-300 { border-color: #374151 !important; }
+html.cc-compact .card { padding: 0.85rem; }
+html.cc-compact .input-field { padding-top: .5rem; padding-bottom: .5rem; }
+
+
+/* Google Translate banner is intentionally hidden; language is controlled from Craft Connect Settings. */
+.goog-te-banner-frame,
+iframe.goog-te-banner-frame,
+body > .skiptranslate,
+.goog-te-ftab,
+.goog-te-balloon-frame,
+.goog-tooltip {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  max-height: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+html, body, body.translated-ltr, body.translated-rtl {
+  top: 0 !important;
+  margin-top: 0 !important;
+}
